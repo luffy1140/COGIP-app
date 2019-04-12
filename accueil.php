@@ -11,11 +11,11 @@
         </div>
         <div>
             <ul>
-                <li>Accueil</li>
-                <li>Factures</li>
-                <li>Sociétés</li>
-                <li>Contact</li>
-                <li><a href="connexion_soc.php">Connexion</a></li>
+                <li><a href="accueil.php">Accueil</a></li>
+                <li><a href="factures.php">Factures</a></li>
+                <li><a href="inscription_soc.html">Sociétés</a></li>
+                <li><a href="inscription_cont.php">Contact</a></li>
+                <li><a href="connexion_soc.html">Connexion</a></li>
             </ul>
         </div>
     </header>

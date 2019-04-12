@@ -8,7 +8,7 @@
  $username = $_POST['login'];
  $password = $_POST['password'];
 
- $query = "SELECT * FROM `form` WHERE login='$username' and password='$password'";
+ $query = "SELECT * FROM `login` WHERE login='$username' and password='$password'";
 
  $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
  $count = mysqli_num_rows($result);
@@ -18,7 +18,7 @@
   $_SESSION['login']=$username;
     $_SESSION['password']=$password;
 
-header('Location:delete_soc.php');
+header('Location:accueil2.php');
  }else{
 
  echo "Login ou mdp incorrect";
