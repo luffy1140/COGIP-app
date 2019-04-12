@@ -26,7 +26,7 @@ $req->execute(array(
  ?>
  <?php
 $req->closeCursor();
-header('location:delete.php')
+header('location:deleteContact.php')
   ?>
 
  

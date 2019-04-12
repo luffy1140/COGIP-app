@@ -62,4 +62,4 @@ if (isset($_GET['id'])) {
     <input type="submit" name="submit" value="Submit">
 </form>
 
-<a href="delete.php">Retour</a>
+<a href="deleteContact.php">Retour</a>
