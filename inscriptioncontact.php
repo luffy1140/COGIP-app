@@ -10,7 +10,7 @@ echo $prenom;
 echo $societe;
 
 
-$bdd = new PDO('mysql:host=localhost;dbname=compta;charset=utf8', 'root', '');
+$bdd = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'root', 'pigoc-ppa');
 
 $req = $bdd->prepare('INSERT INTO personnes (nom,prenom,phone,email,societes_id) VALUES(:nom, :prenom,:phone,:email,:societes_id)');
 $req->execute(array(

@@ -21,7 +21,7 @@ header('Location:connexion_soc.html');}
         </div>
         <div>
             <ul>
-                <li><a href="accueil.php">Accueil</a></li>
+                <li><a href="index.php">Accueil</a></li>
                 <li><a href="factures.php">Factures</a></li>
                 <li><a href="inscription_soc.html">Sociétés</a></li>
                 <li><a href="inscription_cont.php">Contact</a></li>
@@ -36,7 +36,7 @@ header('Location:connexion_soc.html');}
 
 if (isset($_GET["id"])) {
   try {
-    $connection = new PDO('mysql:host=localhost;dbname=compta;charset=utf8', 'root', '');
+    $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'root', 'pigoc-ppa');
 
     $id = $_GET["id"];
 
@@ -53,7 +53,7 @@ if (isset($_GET["id"])) {
 }
 
 try {
-  $connection = new PDO('mysql:host=localhost;dbname=compta;charset=utf8', 'root', '');
+  $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'root', 'pigoc-ppa');
 
   $sql = "SELECT * FROM personnes";
 
@@ -108,7 +108,7 @@ try {
 
 if (isset($_GET["id"])) {
   try {
-    $connection = new PDO('mysql:host=localhost;dbname=compta;charset=utf8', 'root', '');
+    $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'root', 'pigoc-ppa');
 
     $id = $_GET["id"];
 
@@ -125,7 +125,7 @@ if (isset($_GET["id"])) {
 }
 
 try {
-  $connection = new PDO('mysql:host=localhost;dbname=compta;charset=utf8', 'root', '');
+  $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'root', 'pigoc-ppa');
 
   $sql = "SELECT * FROM societes";
 
@@ -179,7 +179,7 @@ try {
 
 if (isset($_GET["id"])) {
   try {
-    $connection = new PDO('mysql:host=localhost;dbname=compta;charset=utf8', 'root', '');
+    $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'root', 'pigoc-ppa');
 
     $id = $_GET["id"];
 
@@ -196,7 +196,7 @@ if (isset($_GET["id"])) {
 }
 
 try {
-  $connection = new PDO('mysql:host=localhost;dbname=compta;charset=utf8', 'root', '');
+  $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'root', 'pigoc-ppa');
 
   $sql = "SELECT * FROM Factures";
 
@@ -234,8 +234,8 @@ try {
       <td><?php echo $row["personnes_id"]; ?></td>
       <td><?php echo $row["societes_id"]; ?></td>
 
-      <td><a href="delete_soc.php?id=<?php echo $row["id"]; ?>">Delete</a></td>   
-      <td><a href="update_soc.php?id=<?php echo $row["id"]; ?>">Edit</a></td>
+      <td><a href="deletefact.php?id=<?php echo $row["id"]; ?>">Delete</a></td>   
+      <td><a href="updatefact.php?id=<?php echo $row["id"]; ?>">Edit</a></td>
       
 
      

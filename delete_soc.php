@@ -11,7 +11,7 @@ header('Location:connexion.html');}
 
 if (isset($_GET["id"])) {
   try {
-    $connection = new PDO('mysql:host=localhost;dbname=compta;charset=utf8', 'root', '');
+    $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'root', 'pigoc-ppa');
 
     $id = $_GET["id"];
 
@@ -28,7 +28,7 @@ if (isset($_GET["id"])) {
 }
 
 try {
-  $connection = new PDO('mysql:host=localhost;dbname=compta;charset=utf8', 'root', '');
+  $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'root', 'pigoc-ppa');
 
   $sql = "SELECT * FROM societes";
 
