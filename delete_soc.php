@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+
+echo $_SESSION['login'];
+
+if (empty($_SESSION['login']) || empty($_SESSION['password'])){
+header('Location:connexion.html');}
+
 
 
 if (isset($_GET["id"])) {
@@ -7,7 +15,7 @@ if (isset($_GET["id"])) {
 
     $id = $_GET["id"];
 
-    $sql = "DELETE FROM personnes WHERE id = :id";
+    $sql = "DELETE FROM societes WHERE id = :id";
 
     $statement = $connection->prepare($sql);
     $statement->bindValue(':id', $id);
@@ -22,7 +30,7 @@ if (isset($_GET["id"])) {
 try {
   $connection = new PDO('mysql:host=localhost;dbname=compta;charset=utf8', 'root', '');
 
-  $sql = "SELECT * FROM personnes";
+  $sql = "SELECT * FROM societes";
 
   $statement = $connection->prepare($sql);
   $statement->execute();
@@ -41,28 +49,28 @@ try {
   <thead>
     <tr>
       <th>#</th>
-      <th>Nom</th>
-      <th>prenom</th>
-      <th>phone</th>
-      <th>email</th>
-      <th>societe_id</th>
-    
+      <th>Nom société</th>
+      <th>pays</th>
+      <th>tva</th>
+      <th>type</th>
 
     </tr>
   </thead>
   <tbody>
   <?php foreach ($result as $row) : ?>
     <tr>
-      <td><a href="detailcontact.php"><?php echo $row["id"]; ?></a></td>
-      <td><?php echo $row["nom"]; ?></td>
-      <td><?php echo $row["prenom"]; ?></td>
-      <td><?php echo $row["phone"]; ?></td>
-      <td><?php echo $row["email"]; ?></td>
-      <td><?php echo $row["societes_id"]; ?></td>
+      <td><?php echo $row["id"]; ?></td>
+      <td><?php echo $row["nom_societe"]; ?></td>
+      <td><?php echo $row["pays"]; ?></td>
+      <td><?php echo $row["tva"]; ?></td>
+      <td><?php echo $row["type"]; ?></td>
 
-     
+      <td><a href="delete_soc.php?id=<?php echo $row["id"]; ?>">Delete</a></td>
+      <td><a href="update_soc.php?id=<?php echo $row["id"]; ?>">Edit</a></td>
     </tr>
+
   <?php endforeach; ?>
   </tbody>
-</table>
 
+<a href="logout.php" >Logout</a>
+</table>

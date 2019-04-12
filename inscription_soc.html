@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div id="container">
+  <h1> Ajout nouvelle société </h1>
+<form action="inscription_soc.php" method="post">
+  <div>
+  <label>Nom de la société</label>
+    <input type="text" name="nom_societe">
+  </div>
+  <div>
+    <label>Pays</label>
+      <input type="text" name="pays">
+    </div>
+    <div>
+      <label>N° TVA</label>
+        <input type="number" name="tva">
+    </div>
+
+    <SELECT name="type" size="1">
+    <OPTION>client
+    <OPTION>fournisseur
+    <input type="submit" id="btn" value="s'inscrire'">
+</form>
+</div>
+</body>
+</html>
