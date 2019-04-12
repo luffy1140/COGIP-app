@@ -3,7 +3,7 @@
 
 if (isset($_POST['submit'])) {
   try {
-    $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'root', 'pigoc-ppa');
+    $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'id9274516_root', '');
     $user =[
       "id"        => $_POST['id'],
       "nom" => $_POST['nom'],
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
 
 if (isset($_GET['id'])) {
   try {
-  $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'root', 'pigoc-ppa');
+  $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'id9274516_root', '');
     $id = $_GET['id'];
     $sql = "SELECT * FROM personnes WHERE id = :id";
     $statement = $connection->prepare($sql);

@@ -3,7 +3,7 @@
 
 if (isset($_GET["id"])) {
   try {
-    $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'root', 'pigoc-ppa');
+    $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'id9274516_root', '');
 
     $id = $_GET["id"];
 
@@ -20,7 +20,7 @@ if (isset($_GET["id"])) {
 }
 
 try {
-  $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'root', 'pigoc-ppa');
+  $connection = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'id9274516_root', '');
 
   $sql = "SELECT * FROM Factures ";
 

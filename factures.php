@@ -6,7 +6,7 @@
 try
 {
 	// On se connecte à MySQL
-$bd = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'root', 'pigoc-ppa', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$bd = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'id9274516_root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 }
 catch(Exception $e)
 {

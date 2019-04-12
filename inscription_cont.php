@@ -18,7 +18,7 @@
             Société :    
             <select name="societe">
             <?php  
-            $bdd = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'root', 'pigoc-ppa');     
+            $bdd = new PDO('mysql:host=localhost;dbname=id9274516_compta;charset=utf8', 'id9274516_root', '');     
             $resultat = $bdd->query('SELECT * FROM societes');
             $options = "";
             while ($donnees = $resultat->fetch())
